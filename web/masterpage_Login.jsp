@@ -8,8 +8,8 @@
 </head>
 <body >
    
-    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
- <tr valign="top" align="center">
+ <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+    <tr valign="top" align="center">
             <td>
                 <table width="1000" cellpadding="0" cellspacing="0">
                       <!-- header -->
@@ -23,17 +23,7 @@
                     <tr valign="top" align="center">
                         <td style="border-top: 1px solid rgb(255, 255, 255);" height="363">
                             <table height="100%" width="100%" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
-                                <tr valign="top">
-                                    <td rowspan="2" style="background-position: center top; background-repeat: no-repeat;"
-                                        width="40" background="images/body_left.jpg">
-                                    </td>
-                                    <td style="background-repeat: repeat-x; background-position: center top;" height="43"
-                                        width="920" background="images/body_top.jpg">
-                                    </td>
-                                    <td rowspan="2" style="background-position: center top; background-repeat: no-repeat;"
-                                        width="40" background="images/body_right.jpg">
-                                    </td>
-                                </tr>
+                              
                                 <tr valign="top">
                                     <td height="275" align="center">
                                         <!-- Contents Starts-->

@@ -20,8 +20,25 @@ public class CommonServices {
         LoginBean objBean = new LoginBean();
         objBean.setCheck("invalid");
         try {
-            con = ConnectDB.connect();
+            /* connect() of ConnectDB does first 2 steps:
+             a) Register the driver class
+             b) Create the connection object
+            */ 
+            con = ConnectDB.connect(); 
+            
+            /* 
+                STEP 3: Create the Statement object
+                createStatement() method of Connection interface is used to create statement.
+                The object of statement(i.e. stmt) is responsible to execute queries with the database. 
+            */
             stmt = con.createStatement();
+            
+            
+            /*
+                STEP 4: Execute the query
+                executeQuery() method of Statement interface is used to execute queries to the database.
+                This method returns the object of ResultSet(i.e. rs) that can be used to get all the records of a table. 
+            */
             String q = "select * from logindetail where username='" + username + "'";
             rs = stmt.executeQuery(q);
             while (rs.next()) {
@@ -38,6 +55,9 @@ public class CommonServices {
             return objBean;
         } finally {
             try {
+                /*
+                    STEP 5: Close the connection,statment and resultset objects
+                */
                 rs.close();
                 stmt.close();
                 con.close();
@@ -123,7 +143,7 @@ public class CommonServices {
     {
         Connection con=null;
         Statement stmt=null;
-        ResultSet rs=null;
+        ResultSet rs = null;
         String result="failed";
         try
         {

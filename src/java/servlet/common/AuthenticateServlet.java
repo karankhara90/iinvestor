@@ -9,6 +9,7 @@ import beans.common.LoginBean;
 import datalayer.common.CommonServices;
 import java.io.IOException;
 import java.io.PrintWriter;
+//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,6 +45,8 @@ public class AuthenticateServlet extends HttpServlet {
             {
                  hs.setAttribute("username",username);
                 response.sendRedirect("company_snapshot/masterpage.jsp");
+                 //RequestDispatcher rd = request.getRequestDispatcher("company_snapshot/masterpage.jsp");
+                 //rd.forward(request, response);
             }
             else
             {
